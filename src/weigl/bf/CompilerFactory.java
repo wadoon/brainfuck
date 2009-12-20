@@ -176,7 +176,7 @@ public class CompilerFactory {
 		InstructionHandle loopF = il.append(fac.createInvoke(cg
 				.getClassName(), CHECK_LOOP_NAME, Type.BOOLEAN, new Type[] {},
 				Constants.INVOKESTATIC));
-		InstructionHandle loopH = il.insert(loop, new GOTO(loopF));
+		il.insert(loop, new GOTO(loopF));
 		il.append(new IFNE(loop));
 	}
 
