@@ -1,0 +1,11 @@
+#!/bin/sh
+
+JAR=weigl-bf.jar
+
+if [ -f $JAR ] ; then 
+    CP=$JAR
+else
+    CP=./bin/
+fi
+
+java -cp $CP  weigl.bf.BFDirectCompiler $@
